@@ -34,7 +34,7 @@ function Faculty() {
   const getFaculty = async () => {
 
     const response = await fetch(
-      "http://localhost:5000/api/faculty"
+      "${import.meta.env.VITE_API_URL}/api/faculty"
     );
 
     const data =
@@ -56,7 +56,7 @@ function Faculty() {
     if (editId) {
 
       await fetch(
-        `http://localhost:5000/api/faculty/${editId}`,
+        `${import.meta.env.VITE_API_URL}/api/faculty/${editId}`,
         {
           method: "PUT",
 
@@ -79,7 +79,7 @@ function Faculty() {
     else {
 
       await fetch(
-        "http://localhost:5000/api/faculty",
+        "${import.meta.env.VITE_API_URL}/api/faculty",
         {
           method: "POST",
 
@@ -109,7 +109,7 @@ function Faculty() {
   const deleteFaculty = async (id) => {
 
     await fetch(
-      `http://localhost:5000/api/faculty/${id}`,
+      `${import.meta.env.VITE_API_URL}/api/faculty/${id}`,
       {
         method: "DELETE"
       }
