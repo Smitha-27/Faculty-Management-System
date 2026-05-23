@@ -25,7 +25,7 @@ function Dashboard() {
     try {
 
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/faculty`
+        `${import.meta.env.VITE_API_URL}/api/faculty`
       );
 
       const data = await response.json();
