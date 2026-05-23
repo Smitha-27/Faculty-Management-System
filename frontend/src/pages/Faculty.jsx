@@ -34,7 +34,7 @@ function Faculty() {
   const getFaculty = async () => {
 
     const response = await fetch(
-      "${import.meta.env.VITE_API_URL}/api/faculty"
+      `${import.meta.env.VITE_API_URL}/api/faculty`
     );
 
     const data =
@@ -79,7 +79,7 @@ function Faculty() {
     else {
 
       await fetch(
-        "${import.meta.env.VITE_API_URL}/api/faculty",
+        `${import.meta.env.VITE_API_URL}/api/faculty`,
         {
           method: "POST",
 
